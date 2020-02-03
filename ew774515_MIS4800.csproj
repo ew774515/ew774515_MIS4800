@@ -171,15 +171,20 @@
     <Compile Include="Controllers\customersController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Controllers\ordersController.cs" />
+    <Compile Include="Controllers\ProductsController.cs" />
     <Compile Include="DAL\MIS4200Context.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\MISContext\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\customer.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
+    <Compile Include="Models\OrderDetail.cs" />
     <Compile Include="Models\orders.cs" />
+    <Compile Include="Models\Products.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
   </ItemGroup>
@@ -245,6 +250,16 @@
     <Content Include="Views\customers\Details.cshtml" />
     <Content Include="Views\customers\Edit.cshtml" />
     <Content Include="Views\customers\Index.cshtml" />
+    <Content Include="Views\orders\Create.cshtml" />
+    <Content Include="Views\orders\Delete.cshtml" />
+    <Content Include="Views\orders\Details.cshtml" />
+    <Content Include="Views\orders\Edit.cshtml" />
+    <Content Include="Views\orders\Index.cshtml" />
+    <Content Include="Views\Products\Create.cshtml" />
+    <Content Include="Views\Products\Delete.cshtml" />
+    <Content Include="Views\Products\Details.cshtml" />
+    <Content Include="Views\Products\Edit.cshtml" />
+    <Content Include="Views\Products\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

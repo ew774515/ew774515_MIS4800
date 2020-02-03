@@ -15,5 +15,9 @@ namespace ew774515_MIS4800.DAL
         }
         public DbSet<customer> Customers { get; set; }
         public DbSet<orders> Orders { get; set; }
+
+        public DbSet<Products> Products { get; set; }
+
+        public DbSet<OrderDetail> OrderDetails { get; set; }
     }
 }

@@ -16,5 +16,9 @@ namespace ew774515_MIS4800.Models
         public string phone{ get; set; }
 
         public DateTime customerSince { get; set; }
+
+        public string fullName {
+            get { return customerLastName + ", " + customerFirstName; }
+        }
     }
 }
