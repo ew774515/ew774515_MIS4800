@@ -21,6 +21,14 @@ namespace ew774515_MIS4800.DAL
 
         public DbSet<OrderDetail> OrderDetails { get; set; }
 
+        public DbSet<pets> Pets { get; set; }
+
+        public DbSet<vets> Vets { get; set; }
+
+        public DbSet<appointments> Appointments { get; set; }
+
+
+
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             modelBuilder.Conventions.Remove<OneToManyCascadeDeleteConvention>();

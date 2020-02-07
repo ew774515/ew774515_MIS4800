@@ -1,0 +1,69 @@
+﻿@model IEnumerable<ew774515_MIS4800.Models.pets>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.petsLastName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.petsFirstName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.email)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.phone)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.petsType)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.petsAge)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.patientSince)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.petsLastName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.petsFirstName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.email)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.phone)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.petsType)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.petsAge)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.patientSince)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.petsID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.petsID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.petsID })
+        </td>
+    </tr>
+}
+
+</table>

@@ -1,0 +1,50 @@
+﻿@model ew774515_MIS4800.Models.appointments
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>appointments</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Pets.petsLastName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Pets.petsLastName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Vets.vetsLastName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Vets.vetsLastName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.appointmentsPrice)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.appointmentsPrice)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.appointmentsDescription)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.appointmentsDescription)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.appointmentsID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
