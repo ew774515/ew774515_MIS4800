@@ -40,8 +40,8 @@ namespace ew774515_MIS4800.Controllers
         // GET: appointments/Create
         public ActionResult Create()
         {
-            ViewBag.petsID = new SelectList(db.Pets, "petsID", "petsLastName");
-            ViewBag.vetsID = new SelectList(db.Vets, "vetsID", "vetsLastName");
+            ViewBag.petsID = new SelectList(db.Pets, "petsID", "fullName");
+            ViewBag.vetsID = new SelectList(db.Vets, "vetsID", "fullName");
             return View();
         }
 
@@ -59,8 +59,8 @@ namespace ew774515_MIS4800.Controllers
                 return RedirectToAction("Index");
             }
 
-            ViewBag.petsID = new SelectList(db.Pets, "petsID", "petsLastName", appointments.petsID);
-            ViewBag.vetsID = new SelectList(db.Vets, "vetsID", "vetsLastName", appointments.vetsID);
+            ViewBag.petsID = new SelectList(db.Pets, "petsID", "fullName", appointments.petsID);
+            ViewBag.vetsID = new SelectList(db.Vets, "vetsID", "fullName", appointments.vetsID);
             return View(appointments);
         }
 
@@ -76,8 +76,8 @@ namespace ew774515_MIS4800.Controllers
             {
                 return HttpNotFound();
             }
-            ViewBag.petsID = new SelectList(db.Pets, "petsID", "petsLastName", appointments.petsID);
-            ViewBag.vetsID = new SelectList(db.Vets, "vetsID", "vetsLastName", appointments.vetsID);
+            ViewBag.petsID = new SelectList(db.Pets, "petsID", "fullName", appointments.petsID);
+            ViewBag.vetsID = new SelectList(db.Vets, "vetsID", "fullName", appointments.vetsID);
             return View(appointments);
         }
 
@@ -94,8 +94,8 @@ namespace ew774515_MIS4800.Controllers
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
-            ViewBag.petsID = new SelectList(db.Pets, "petsID", "petsLastName", appointments.petsID);
-            ViewBag.vetsID = new SelectList(db.Vets, "vetsID", "vetsLastName", appointments.vetsID);
+            ViewBag.petsID = new SelectList(db.Pets, "petsID", "fullName", appointments.petsID);
+            ViewBag.vetsID = new SelectList(db.Vets, "vetsID", "fullName", appointments.vetsID);
             return View(appointments);
         }
 
